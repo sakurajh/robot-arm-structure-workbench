@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#101416">
+  <title>机械臂结构工作台</title>
+  <style>/* INLINE_CSS */</style>
+</head>
+<body>
+  <main id="app">
+    <section id="viewport" aria-label="3D 机械臂视口"></section>
+
+    <header class="app-header" aria-label="应用标题">
+      <div class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></div>
+      <div>
+        <p class="eyebrow">MECHANICAL SYSTEMS / 06 AXIS</p>
+        <h1>机械臂结构工作台</h1>
+      </div>
+      <div class="system-status"><span aria-hidden="true"></span>离线工作台</div>
+    </header>
+
+    <aside id="assembly-panel" aria-labelledby="assembly-title">
+      <div class="panel-heading">
+        <div>
+          <p class="panel-index">01 / ASSEMBLY</p>
+          <h2 id="assembly-title">总成层级</h2>
+        </div>
+        <span class="panel-badge">6 轴</span>
+      </div>
+      <nav id="assembly-tree" aria-label="总成层级导航"></nav>
+      <p class="panel-empty">选择零部件以查看装配关系</p>
+    </aside>
+
+    <aside id="control-panel" aria-labelledby="control-title">
+      <div class="panel-heading">
+        <div>
+          <p class="panel-index">02 / VISUALIZATION</p>
+          <h2 id="control-title">结构展示</h2>
+        </div>
+        <span class="panel-badge">实时</span>
+      </div>
+      <div id="mode-controls" aria-label="展示模式">
+        <button class="is-active" data-mode="assembly" aria-pressed="true"><span>01</span>完整装配</button>
+        <button data-mode="exploded" aria-pressed="false"><span>02</span>爆炸图</button>
+        <button data-mode="shell" aria-pressed="false"><span>03</span>透明外壳</button>
+        <button data-mode="section" aria-pressed="false"><span>04</span>剖面图</button>
+      </div>
+      <div class="range-panels">
+        <label id="explosion-control" class="range-panel">爆炸距离 <output id="explosion-value">0%</output>
+          <input id="explosion" type="range" min="0" max="100" value="0">
+          <span class="range-scale" aria-hidden="true"><span>0</span><span>100</span></span>
+        </label>
+        <label id="shell-control" class="range-panel">外壳透明度 <output id="shell-value">0%</output>
+          <input id="shell" type="range" min="0" max="100" value="0">
+          <span class="range-scale" aria-hidden="true"><span>0</span><span>100</span></span>
+        </label>
+        <section id="section-control" class="range-panel" aria-label="剖面控制">
+          <div class="section-label">剖切轴向</div>
+          <div id="clip-axes" aria-label="剖切轴向">
+            <button data-axis="x" aria-pressed="false">X</button>
+            <button data-axis="y" aria-pressed="false">Y</button>
+            <button data-axis="z" aria-pressed="false">Z</button>
+          </div>
+          <label>剖切位置 <output id="clip-value">0.00</output>
+            <input id="clip-position" type="range" min="-100" max="100" value="0">
+          </label>
+          <span class="range-scale" aria-hidden="true"><span>−100</span><span>+100</span></span>
+        </section>
+      </div>
+      <button id="reset-view"><span aria-hidden="true">↺</span>一键复位</button>
+    </aside>
+
+    <section id="part-details" aria-live="polite">
+      <span class="details-icon" aria-hidden="true">i</span>
+      <div><p class="panel-index">COMPONENT INSPECTOR</p>点击零件查看结构说明</div>
+    </section>
+    <div id="webgl-error" role="alert" hidden>无法初始化 WebGL2，请使用支持硬件加速的新版 Chrome 或 Edge。</div>
+  </main>
+  <script>/* INLINE_JS */</script>
+</body>
+</html>

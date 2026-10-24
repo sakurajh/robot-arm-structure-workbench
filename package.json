@@ -1,0 +1,17 @@
+{
+  "name": "offline-robot-arm-demo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test:unit": "node --test tests/build.test.mjs tests/state.test.mjs tests/model.test.mjs",
+    "test:browser": "node --test tests/browser.test.mjs",
+    "test": "npm run build && npm run test:unit && npm run test:browser"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.10",
+    "playwright-core": "1.56.0",
+    "three": "0.180.0"
+  }
+}

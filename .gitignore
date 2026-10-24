@@ -1,0 +1,8 @@
+node_modules/
+.superpowers/
+.qoder-credits/
+demo/frames/
+demo/*.tmp
+*.log
+.DS_Store
+Thumbs.db
