@@ -2,9 +2,15 @@
 
 一个用于结构教学演示的浏览器 3D 机械臂。48 个可点选零件、8 个总成，支持完整装配、爆炸图、透明外壳和 X/Y/Z 剖面四种查看方式。构建产物是**单个可离线双击运行的 `index.html`**，运行时不加载 CDN 或任何外部资源。
 
-**在线演示：<https://sakurajh.github.io/robot-arm-structure-workbench/>**
+**在线演示：<https://www.sakura.work.gd/robot-arm-structure-workbench/>**
 
 ![默认场景](preview.png)
+
+## 功能演示
+
+![爆炸图、透明外壳与剖面模式](demo/robot-arm-modes.gif)
+
+完整 33 秒演示（含零件拾取、总成聚焦与一键复位）：[demo/robot-arm-demo.mp4](demo/robot-arm-demo.mp4)
 
 ## 功能
 

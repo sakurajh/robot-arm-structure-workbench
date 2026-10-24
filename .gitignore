@@ -1,7 +1,16 @@
 node_modules/
 .superpowers/
 .qoder-credits/
+pelican-bicycle.svg
+pelican-bicycle-preview.png
 demo/frames/
+demo/frames.json
+demo/frames.txt
+demo/concat.txt
+demo/body.mp4
+demo/intro.mp4
+demo/end.mp4
+demo/check-*.jpg
 demo/*.tmp
 *.log
 .DS_Store
