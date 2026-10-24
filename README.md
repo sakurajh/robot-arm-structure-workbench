@@ -58,6 +58,11 @@ scripts/build.mjs  esbuild 打包并内联为单文件
 tests/            单元测试与 Playwright 真实浏览器测试
 ```
 
+## 相关文章
+
+- 个人博客：[Three.js 单文件离线机械臂工作台：爆炸图、透明外壳与剖面](https://www.sakura.work.gd/2026/10/24/threejs-offline-robot-arm-workbench.html)
+- CSDN：[同名文章](https://blog.csdn.net/Sakura_j_h_/article/details/168971369)
+
 ## 说明
 
 模型是按教学示意程序化生成的，用于理解六轴机械臂的总成划分与传动关系，不具备工程级 CAD 的尺寸和装配精度。
